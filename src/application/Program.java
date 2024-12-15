@@ -1,4 +1,4 @@
-//Reference method com método estático
+//Reference method com método não estático
 package application;
 
 import java.util.ArrayList;
@@ -19,9 +19,11 @@ public class Program {
 		list.add(new Product("Tablet", 350.50));
 		list.add(new Product("HD Case", 80.90));
 		
-		list.removeIf(Product::staticPredicateProduct);
+		list.removeIf(Product::nonStaticPredicateProduct);
 		
-		list.forEach(System.out::println);
+		for(Product p : list) {
+			System.out.println(p);
+		}
 		
 	}
 
