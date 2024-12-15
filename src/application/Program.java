@@ -1,4 +1,4 @@
-//Implementação da Interface
+//Reference method com método estático
 package application;
 
 import java.util.ArrayList;
@@ -19,7 +19,7 @@ public class Program {
 		list.add(new Product("Tablet", 350.50));
 		list.add(new Product("HD Case", 80.90));
 		
-		list.removeIf(new PredicateProduct());
+		list.removeIf(Product::staticPredicateProduct);
 		
 		list.forEach(System.out::println);
 		
